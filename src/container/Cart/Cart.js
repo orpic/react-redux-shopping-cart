@@ -4,9 +4,11 @@ import CartItem from "./CartItem";
 
 const Cart = () => {
   return (
-    <div className="cart-box">
-      <p className="cart-heading">Your Shopping cart</p>
-      <CartItem />
+    <div className="container-center">
+      <div className="cart-box">
+        <p className="cart-heading">your Shopping cart</p>
+        <CartItem />
+      </div>
     </div>
   );
 };
