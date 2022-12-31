@@ -1,3 +1,7 @@
+ul {
+  list-style: none;
+}
+
 .cart-box {
   width: 550px;
   background-color: #b3c3e0;
