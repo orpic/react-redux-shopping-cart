@@ -27,11 +27,12 @@ const CartItem = ({ item }) => {
   };
 
   return (
-    <div className="cart-item-box">
+    <li className="cart-item-box">
       <div className="item-name-price-quant-btn-row">
         <p className="item-name">{title}</p>
         <p className="item-total-price">
-          ₹{total}.00<span className="item-price">(₹{price}.00/item)</span>
+          ₹{total.toFixed(2)}
+          <span className="item-price">(₹{price.toFixed(2)}/item)</span>
         </p>
       </div>
       <div className="item-name-price-quant-btn-row">
@@ -47,7 +48,7 @@ const CartItem = ({ item }) => {
           </button>
         </p>
       </div>
-    </div>
+    </li>
   );
 };
 

@@ -12,20 +12,20 @@ const Cart = () => {
     <div className="container-center">
       <div className="cart-box">
         <p className="cart-heading">your Shopping cart</p>
-        {cartItems.map((item) => (
-          <CartItem
-            key={item.id}
-            item={{
-              id: item.id,
-              title: item.title,
-              quantity: item.quantity,
-              total: item.totalPrice,
-              price: item.price,
-            }}
-          />
-        ))}
-
-        <CartItem />
+        <ul>
+          {cartItems.map((item) => (
+            <CartItem
+              key={item.id}
+              item={{
+                id: item.id,
+                title: item.title,
+                quantity: item.quantity,
+                total: item.totalPrice,
+                price: item.price,
+              }}
+            />
+          ))}
+        </ul>
       </div>
     </div>
   );
