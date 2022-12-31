@@ -2,7 +2,12 @@ import React from "react";
 import "./CartItem.css";
 
 const CartItem = ({ item }) => {
-  const { title, quantity, total, price } = item;
+  const { title, quantity, total, price } = item || {
+    title: "Fallback Title",
+    quantity: 0,
+    total: 0,
+    price: 0,
+  };
 
   return (
     <div className="cart-item-box">

@@ -5,13 +5,13 @@ import ProdItem from "./ProdItem";
 const DUMMY_PRODUCTS = [
   {
     id: "p1",
-    price: "6",
+    price: 6,
     title: "My first Book",
     description: "My first book description",
   },
   {
     id: "p2",
-    price: "5",
+    price: 5,
     title: "My second Book",
     description: "My second book description",
   },
