@@ -1,24 +1,36 @@
 import React from "react";
 import "./Item.css";
+import ProdItem from "./ProdItem";
+
+const DUMMY_PRODUCTS = [
+  {
+    id: "p1",
+    price: "6",
+    title: "My first Book",
+    description: "My first book description",
+  },
+  {
+    id: "p2",
+    price: "5",
+    title: "My second Book",
+    description: "My second book description",
+  },
+];
 
 const Item = () => {
   return (
     <>
-      <div className="container-center">
-        <div className="prod-item-box">
-          <div className="prod-item-row">
-            <div className="prod-item-col pr-it-col-left">
-              <p className="prod-item-name">Test Product 1</p>
-              <p className="prod-item-desc">
-                this is a first product - amazing
-              </p>
-            </div>
-            <div className="prod-item-col pr-it-col-right">
-              <p className="prod-item-price">₹10.00</p>
-              <p className="prod-item-add-to-cart btn">add to cart</p>
-            </div>
-          </div>
-        </div>
+      <div className="container-center container-col">
+        <p className="product-title">All your favourite products!!</p>
+        {DUMMY_PRODUCTS.map((product) => (
+          <ProdItem
+            key={product.id}
+            id={product.id}
+            title={product.title}
+            price={product.price}
+            description={product.description}
+          />
+        ))}
       </div>
     </>
   );

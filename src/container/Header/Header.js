@@ -1,11 +1,13 @@
 import React from "react";
 import "./Header.css";
 
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { uiActions } from "../../store/uiSlice";
 
 const Header = () => {
   const dispatch = useDispatch();
+
+  const cardQuantity = useSelector((state) => state.cart.totalQuantity);
 
   const toggleCartHandler = () => {
     dispatch(uiActions.toggle());
@@ -15,7 +17,7 @@ const Header = () => {
     <div className="header">
       <p className="logo">Redux Shopping Cart</p>
       <button onClick={toggleCartHandler} className="btn">
-        My Cart <span className="cart-quantity">1</span>
+        My Cart <span className="cart-quantity">{cardQuantity}</span>
       </button>
     </div>
   );
